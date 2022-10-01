@@ -1,0 +1,30 @@
+let oldPersonsList = ["Farhan Ahmed", "Salman Ali", "Alina Baber"]
+
+console.log(`Salman Ali is not coming\n`)
+
+let modifiedPersonsList = oldPersonsList.map((person) => {
+    if (person !== "Salman Ali")
+        return person
+    return "Fahad Ahmed"
+})
+
+modifiedPersonsList.map((person) => console.log(`Hey ${person}, would you like be at my place for dinner?`))
+
+console.log(`\nUpdate!!! Hey guest I just noticed that we have some extra space on table so I'm intiviting other members too\n`)
+
+
+modifiedPersonsList.unshift('Israr')
+
+modifiedPersonsList.splice(2, 0, 'Bilal');
+
+modifiedPersonsList.push('EMad');
+
+modifiedPersonsList.map((person) => console.log(`Hey ${person}, would you like be at my place for dinner?`))
+
+console.log(`\nUpdate!!! Hey guests I have bad news that my table is not arrive yet so we have just space for two member\n`)
+
+modifiedPersonsList = modifiedPersonsList.slice(0, 2)
+
+modifiedPersonsList.map((person) => console.log(`Hey ${person}, would you like be at my place for dinner?`))
+
+console.log(`\nI am inviting ${modifiedPersonsList.length} guests for dinner`)

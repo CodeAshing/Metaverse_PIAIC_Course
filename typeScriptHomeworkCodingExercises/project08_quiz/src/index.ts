@@ -33,38 +33,7 @@ let score: any = [], question: any = [
 ];
 
 inquirer
-    .prompt([
-        {
-            type: "list",
-            name: "f_1",
-            message: "The highest waterfall in the world is:",
-            choices: ['Nigerian waterfall', 'Louiz wale waterfall', 'Angel waterfall', 'Tibetian waterfall']
-        },
-        {
-            type: "list",
-            name: "f_2",
-            message: "Death valley of California is famous for:",
-            choices: ['Delicious Foods', 'Hottest Area', 'Buildings', 'Forests']
-        },
-        {
-            type: "list",
-            name: "f_3",
-            message: "The deepest part of the ocean is:",
-            choices: ['Mariana Trench', 'Venizuala loops', 'Bermuda triangle', 'Black valley']
-        },
-        {
-            type: "list",
-            name: "f_4",
-            message: "Lowest point of Europe is:",
-            choices: ['Virgo bay', 'Caspian Sea', 'Mt.Elbrus', 'GreyMark forests']
-        },
-        {
-            type: "list",
-            name: "f_5",
-            message: "Antarctica contains area of the earth is:",
-            choices: ['1.3%', '11.7%', '3.4%', '8.2%']
-        }
-    ])
+    .prompt(question)
     .then((answers: any) => {
         let f_1: string = answers.f_1
         let f_2: string = answers.f_2
